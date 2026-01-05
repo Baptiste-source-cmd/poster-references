@@ -1,19 +1,107 @@
-@BOOK{Smith:2012qr,
-	title = {{B}ook {T}itle},
-	publisher = {Publisher},
-	author = {Smith, J.~M. and Jones, A.~B.},
-	year = {2012},
-	edition = {7th},
+@article{lu_automatic_2010,
+	title = {Automatic analysis of syntactic complexity in second language writing},
+	volume = {15},
+	issn = {1384-6655, 1569-9811},
+	url = {http://www.jbe-platform.com/content/journals/10.1075/ijcl.15.4.02lu},
+	doi = {10.1075/ijcl.15.4.02lu},
+	abstract = {We describe a computational system for automatic analysis of syntactic complexity in second language writing using fourteen different measures that have been explored or proposed in studies of second language development. The system takes a written language sample as input and produces fourteen indices of syntactic complexity of the sample based on these measures. The system is designed with advanced second language proficiency research in mind, and is therefore developed and evaluated using college-level second language writing data from the Written English Corpus of Chinese Learners (Wen et al. 2005). Experimental results show that the system achieves a very high reliability on unseen test data from the corpus. We illustrate how the system is used in an example application to investigate whether and to what extent each of these measures significantly differentiates between different proficiency levels.},
+	language = {en},
+	number = {4},
+	urldate = {2025-11-19},
+	journal = {International Journal of Corpus Linguistics},
+	author = {Lu, Xiaofei},
+	month = nov,
+	year = {2010},
+	pages = {474--496},
+	file = {PDF:C\:\\Users\\Bapti\\Zotero\\storage\\5IJHVGXT\\Lu - 2010 - Automatic analysis of syntactic complexity in second language writing.pdf:application/pdf},
 }
 
-@ARTICLE{Smith:2013jd,
-	author = {Jones, A.~B. and Smith, J.~M.},
-	title = {{A}rticle {T}itle},
-	journal = {Journal title},
-	year = {2013},
-	volume = {13},
-	pages = {123-456},
-	number = {52},
-	month = {March},
-	publisher = {Publisher}
+cff-version: 1.2.0
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Honnibal"
+    given-names: "Matthew"
+  - family-names: "Montani"
+    given-names: "Ines"
+  - family-names: "Van Landeghem"
+    given-names: "Sofie"
+  - family-names: "Boyd"
+    given-names: "Adriane"
+  title: "spaCy: Industrial-strength Natural Language Processing in Python"
+  doi: "10.5281/zenodo.1212303"
+  year: 2020
+}
+@inproceedings{qi2020stanza,
+ author = {Qi, Peng and Zhang, Yuhao and Zhang, Yuhui and Bolton, Jason and Manning, Christopher D.},
+ booktitle = {Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics: System Demonstrations},
+ title = {Stanza: A {Python} Natural Language Processing Toolkit for Many Human Languages},
+ url = {https://nlp.stanford.edu/pubs/qi2020stanza.pdf},
+ year = {2020}
+}
+
+
+@article{loignon_alsi_2021,
+	title = {{ALSI} : un nouvel outil d’analyse automatisée de la complexité linguistique pour le français québécois},
+	volume = {44},
+	issn = {0823-3993, 2368-2000},
+	shorttitle = {{ALSI}},
+	url = {https://www.erudit.org/fr/revues/mee/2021-v44-n3-mee07395/1093065ar/},
+	doi = {10.7202/1093065ar},
+	abstract = {Estimer la complexité linguistique est un aspect important de la mesure et de l’évaluation de l’éducation qui peut servir, par exemple, à contrôler la variance indésirable attribuable à la langue ou à fournir aux élèves des textes propices à l’apprentissage. Des techniques de traitement automatique des langues permettent d’extraire différents attributs (features) qui reflètent la complexité du vocabulaire et de la structure des phrases. Dans cet article, nous présentons un nouvel outil appelé ALSI (Analyseur Lexico-Syntaxique Intégré). Nous résumons le fonctionnement de l’outil et présentons les types d’attributs qu’il peut extraire. Nous appliquons ensuite ALSI à 600 textes utilisés dans les écoles primaires et secondaires du Québec et analysons les corrélations entre les attributs et le niveau scolaire associé au texte. Les résultats montrent le potentiel d’ALSI pour la modélisation de la complexité des textes français.},
+	language = {fr},
+	number = {3},
+	urldate = {2026-01-05},
+	journal = {Mesure et évaluation en éducation},
+	author = {Loignon, Guillaume},
+	year = {2021},
+	note = {Publisher: ADMEE-Canada},
+	keywords = {análise de corpus, analyse de corpus, atributos de texto, corpus analysis, français, francês, French, legibilidade, lisibilité, natural language processing, processamento automático da linguagem natural, psycholinguistics, psycholinguistique, readability, traitement automatique du langage naturel},
+	pages = {29--57},
+	file = {Full Text PDF:C\:\\Users\\Bapti\\Zotero\\storage\\AQ7CNSW4\\Loignon - 2021 - ALSI  un nouvel outil d’analyse automatisée de la complexité linguistique pour le français québécoi.pdf:application/pdf},
+}
+
+@article{hansen_textdescriptives_2023,
+	title = {{TextDescriptives}: {A} {Python} package for calculating a large variety of metrics from text},
+	volume = {8},
+	issn = {2475-9066},
+	shorttitle = {{TextDescriptives}},
+	url = {http://arxiv.org/abs/2301.02057},
+	doi = {10.21105/joss.05153},
+	abstract = {TextDescriptives is a Python package for calculating a large variety of metrics from text. It is built on top of spaCy and can be easily integrated into existing workflows. The package has already been used for analysing the linguistic stability of clinical texts, creating features for predicting neuropsychiatric conditions, and analysing linguistic goals of primary school students. This paper describes the package and its features.},
+	number = {84},
+	urldate = {2026-01-05},
+	journal = {Journal of Open Source Software},
+	author = {Hansen, Lasse and Olsen, Ludvig Renbo and Enevoldsen, Kenneth},
+	month = apr,
+	year = {2023},
+	note = {arXiv:2301.02057 [cs]},
+	keywords = {Computer Science - Computation and Language},
+	pages = {5153},
+	annote = {Comment: 3 pages, 0 figures. Submitted to Journal of Open Source Software},
+	file = {Preprint PDF:C\:\\Users\\Bapti\\Zotero\\storage\\9GS86JKT\\Hansen et al. - 2023 - TextDescriptives A Python package for calculating a large variety of metrics from text.pdf:application/pdf;Snapshot:C\:\\Users\\Bapti\\Zotero\\storage\\3TZ3C8MC\\2301.html:text/html},
+}
+
+@phdthesis{kyle_measuring_nodate,
+	title = {Measuring {Syntactic} {Development} in {L2} {Writing}: {Fine} {Grained} {Indices} of {Syntactic} {Complexity} and {Usage}-{Based} {Indices} of {Syntactic} {Sophistication}},
+	shorttitle = {Measuring {Syntactic} {Development} in {L2} {Writing}},
+	url = {https://hdl.handle.net/20.500.14694/414},
+	abstract = {Syntactic complexity has been an area of significant interest in L2 writing development studies over the past 45 years. Despite the regularity in which syntactic complexity measures have been employed, the construct is still relatively under-developed, and, as a result, the cumulative results of syntactic complexity studies can appear opaque. At least three reasons exist for the current state of affairs, namely the lack of consistency and clarity by which indices of syntactic complexity have been described, the overly broad nature of the indices that have been regularly employed, and the omission of indices that focus on usage-based perspectives. This study seeks to address these three gaps through the development and validation of the Tool for the Automatic Assessment of Syntactic Sophistication and Complexity (TAASSC). TAASSC measures large and fined grained clausal and phrasal indices of syntactic complexity and usage-based frequency/contingency indices of syntactic sophistication. Using TAASSC, this study will address L2 writing development in two main ways: through the examination of syntactic development longitudinally and through the examination of human judgments of writing proficiency (e.g., expert ratings of TOEFL essays). This study will have important implications for second language acquisition, second language writing, and language assessment.},
+	urldate = {2026-01-05},
+	school = {Georgia State University},
+	author = {Kyle, Kristopher},
+	doi = {10.57709/8501051},
+}
+
+@book{gee_what_2004,
+	address = {New York, NY},
+	edition = {1. paperback ed},
+	series = {Education},
+	title = {What video games have to teach us about learning and literacy},
+	isbn = {978-1-4039-6538-7},
+	language = {en},
+	publisher = {Palgrave Macmillan},
+	author = {Gee, James Paul},
+	year = {2004},
+	file = {PDF:C\:\\Users\\Bapti\\Zotero\\storage\\RE6ZCWA5\\Gee - 2004 - What video games have to teach us about learning and literacy.pdf:application/pdf},
 }
