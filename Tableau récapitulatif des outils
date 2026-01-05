@@ -1,0 +1,57 @@
+Outils explorés ,fonction, role dans la complexité syntaxique ,Mesures de complexité,problème rencontrés ,commentaires,Limites,Apport pour le projet CoSy,Lien ,Autres,,
+ALSI,"Outil qui permet d'estimer la complexité linguistique d'un texte, en particulier autour du milieu scolaire.","ALSI mesure automatiquement la complexité syntaxique en observant: la longueur des phrases, le nombre de verbes conjugués, la profondeur des arbres syntaxiques, la présence de groupes nominaux complexes,la variation des structures entre phrases ","les mesures sont divisees en 3 niveaux(surface, intermédiare et globale): pour la complexité lexicale(il mesure la longueur des mots, fréquence des mots, âge d'exposition, diversité lexicale(indice de MAAS)).                                                                                                                 Pour la compléxité syntaxique(la longueur des phrases, nombre de verbes conjugues, hauteur de l'arbre syntaxique, groupe nominaux complexes, nombre de virgules, cohésion syntaxique)","les resultats sont stables, mais ALSI est principalement basé sur des manuels scolaires et pour les enfants francophones natifs.                                                                   le registre linguistique est different parce que ALSI attend du francais scolaire, les textes sont propres et complets alors que CoSy traite l'orale aussi.                                ALSI ne mesure pas bien la complexite avancee(effet plateau)","C'est un prototype du français québécois simple à utiliser pour estimer la complexité linguistique, il s'intéresse à la charge cognitive cumulaire, et montre que les mesures simples sont les plus efficaces, il montre également que l'analyse du lexique et de la syntaxe doivent être combinés pour obtenir des résultats fiables.Le prototype est uniquement en ligne, pas d'accès au script. C'est utilisable à titre informatif uniquement. ALSI est puissant pour mesurer la complexité lexicale des textes scolaires en francais, mais ses bases de données et ses hypothèses limitent son application à des corpus non scolaires, en particulier dans le contexte FLE et des textes destines aux adultes. ","limité à l'école primaire, non adapté aux adultes, non adapté au FLE. Erreurs d'analyse sur les phrases longues et difficultés avec la syntaxe orale, et produit une dependance à l'analyseur automatique, ","Longueur moyenne des mots
+Fréquence lexicale des mots
+Âge d’exposition 
+Densité lexicale
+Type de subordination
+Nombre et type de ponctuation 
+Distance syntaxique
+
+",https://gloignon.shinyapps.io/ALAIN_v3/,,,
+TAASSC,"Outil pour l'analyse Automatique de complexité syntaxique, ,complexité des groupes nominaux, expansion phrastique, constructions verbales, variation de registre, approche multi-niveaux, sorties quantitatives ","outil avancé pour l'analyse syntaxique, il prend des fichiers textes simples en anglais(.txt) ensuite il utilise la bibliothèque de traitement du langage naturel Spacy pour effectuer plusieurs étapes d'analyses linguistique(tokenisation, puis chaque mots est étiquetté selon une categorie grammaticale, et l'analyse des dependances. À partir de ces analyses syntaxiques, TAASSC extrait automatiquement un grand nombre de caracteristiques linguistiques, et en parallèle, il calcule des indices de sophistication syntaxique en comparant les structures observées avec leur frequence dans COCA. L'ensemble de ces mesures est ensuite exportée sous forme de fichier de resultats, notamment un tableau CSV. ","TAASSC calcule 354 mesures de complexité, reparties en trois grands types de complexité, mais en priorité on peut mentionner la longueur moyenne des phrases, longueur moyenne des propositions(MLC), nombre de verbes par phrase, dependants par proposition, dependants par nominal, groupes prepositionnels par nominal, adjectifs par nominal, expansion des groupes nominaux, diversité des constructions verbale.","Le modèle est principalement conçu pour l’anglais,sur nos tests, il génère un fichier CSV avec seulement 2 lignes. Les mesures ne s’appliquent pas bien au français. L'analyse syntaxique est basee sur les modeles anglais de spacy et la sophistication fondee sur le corpus COCA. TAASSC repose entierement sur une analyse automatique, ce qui impact les indices de complexite qui peuvent etre fausses. TAASSC suppose une progression uniforme de la complexite avec l'age ou avec le niveau, la complexite mesuree depend plus du genre que du niveau linguistique ","Utile pour comprendre la logique des indices de complexité, mais pas directement exploitable pour du français concernant le prototype n'est pas du tout exploitable contrairement aux script ou l'on comprends mieux les indice,","Le TASSC en tant que logiciel prototype fonctionne uniquement sur des textes et non des phrases, et il a été conçu pour l'anglais,","Mesures de longueur:
+Longueur moyenne des mots
+Longueur moyenne des propositions (MLC)                                                      Longueur moyenne des T-units(MLT)
+Complexité du syntagme nominal:
+Nombre de dépendants par nom
+Ratios de modificateurs ((adjectifs, prépositionnels, relatifs) en francais)
+Complexité clausale:
+Ratio propositions dépendantes/indépendantes
+Proportion de propositions finies vs non-finies
+Densité de subordination coordination:
+Détection ""et/ou/mais""(adaptation au franxais)
+Passifs:
+Avec/sans agent(adaptation au francais)
+",https://www.linguisticanalysistools.org/taassc.html,"COCA : il s'agit d'un sous-corpus de l'anglais américain
+https://www.english-corpora.org/coca/",,
+Outils explorés,Fonction,Rôles dans la complexité syntaxique,Mesure de complexité,Modele,Corpus d'entrainement,Commentaire,Problèmes rencontrés,Apport pour le projet Cosy,Limites ,Autres,Lien documentation/Prototype
+Spacy,"Librairie de Traitement automatique du langage Naturel dans python, qui permet d'analyser des textes.","l'analyse de dépendance syntaxique, part-of-speech tagging et la segmentation en phrase","POS= catégorie grammaticale des tokens
+Parser= Analyse des relations syntaxiques entres les tokens
+Profondeurs de l'arbre de dépendance= la distance des tokens par rapport à l'élément racine de la phrase/énoncé
+Nombre de propositions subordonnées
+Longueur moyenne des dépendances
+Ratio de subordonnée= nombre de subordonnées/nombre de token",fr_core_news_md(médium) ,"Corpus Universal Dependencies (UD_French-GSD)
+- POS , la morphologie, la lemmatisatio, realtions de dépendances syntaxique
+- Contenu: + 16000 phrases (texte journalistique/web/Wikipédia)","L'outil spacy permet d'analyser de nombreuse phrases, d'avoir leur catégorie grammaticale et de pouvoir donner un petit indice de complexité sur les phrases en se basant sur la profondeurs des arbres et le ratio de subordonnées/tokens dans un énoncé. Bien que l'outil soit performant les indices ne suffisent pas à donner la complexité d'une phrase","- Problème d'encodage concernant les apostrophes  dans les textes extraits des corpus il existe deux sortes d'apostrophes et parfois l'outil avait du mal a déterminé le type d'apostrophe et donc l'analysait pas correctement
+- Les répétitions ex: ""Oui oui oui"" l'outil a du mal a les analyser",La profondeur des arbres et le ratio subordnnée/token sont de très bon indices que nous pouvons garder pour la déterminer la complexité des phrases,En fonction des models choisis les résultats peuvent etre différents et pas a 100% fiable. L'analyse se limite à du quantitatif.,"Modèle spacy-small( sm) : résultats sont moins précis et cohérent phrase par phrase.
+Modèle spacy-medium (md) : résultats beaucoup plus corrects et cohérents phrase par phrase.",https://spacy.io/
+Stanza,"librairie de Traitement Automatique du langage Naturel dans Python, capable de réaliser diverses analyses et annotation d'un texte ","Comme pour Spacy, Stanza analyse les dépendances syntaxiques, part -of-speech tagging et la segmentation en phrase","POS= catégorie grammaticale des tokens
+Parser= Analyse des relations syntaxiques entres les tokens
+Profondeurs de l'arbre de dépendance= la distance des tokens par rapport à l'élément racine de la phrase/énoncé
+Nombre de propositions subordonnées
+Longueur moyenne des dépendances
+Ratio de subordonnée= nombre de subordonnées/nombre de token","""fr"" ","Corpus Universal Dependencies (UD_French-GSD)
+- POS , la morphologie, la lemmatisatio, realtions de dépendances syntaxique
+- Contenu: + 16000 phrases (texte journalistique/web/Wikipédia)","L'outil stanza permet d'anlyser de nombreuse phrase, d'avoir leur catégorie gramaticale et de pouvoir donner un petit indice de complexité sur les phrase en se basant sur la profondeurs des arbres et le ratio de subordonné/token dans un énoncé. Bien que l'outil soit performant les indices ne suffisent pas à donner la complexité d'une phrase","- Problème d'encodage concernant les apostrophes  dans les textes extraits des corpus il existe deux sortes d'apostrophes et parfois l'outil avait du mal a déterminé le type d'apostrophe et donc l'analysait pas correctement
+- Les répétitions ex: ""Oui oui oui"" l'outil a du mal a les analyser",La profondeur des arbres et le ratio subordnnée/token sont de très bon indices que nous pouvons garder pour la déterminer la complexité des phrases,En fonction des models choisis les résultats peuvent etre différents et pas a 100% fiable. L'analyse se limite à du quantitatif.,,https://stanfordnlp.github.io/stanza/
+Text descriptive ,"Librairie de Traitement automatique du langage Naturel dans python, qui permet d'analyser des textes à partir de statistiques.","la distance des dépendances
+la proportion des POS
+description des statistiques du texte","
+distance des dépendances : mesure la distance des token par rapport à l'élément dépendant
+Part of speech proportions: dictionnaire de POS qui permet d'ajouter la proportion d'avoir une catégorie autour d'un mot
+description des statistiques : cacule le nombre de tokens/tokens uniques, le nombre de caractères. la moyenne/médiane de la longueur des phrases, des syllabes par token, de longueur des tokens
+","utilise spaCy
+modele fr_core_new_md","il n'est pas entrainé, il s'agit d'une librairie python qui fonctionne avec spaCy.","permet d'analyser la complexité autour des textes, avec des mesures de moyennes comme les longueurs des mots, la distance des dépendances, et fonctionne avec Stanza/spaCy","- s'intéresse principalement à la lisibilité
+
+-travaille surtout des mesures de moyenne, intéressants pour les textes, mais pas pour les phrases
+
+","Utilise des mesures de complexité typiques, comme la longueur des mots et la longueur des dépendances, mais pas certain de pouvoir l'appliquer à des phrases. Est plutôt conçu pour de l'analyse de texte en globalité.","ne se limite qu'au texte dans sa globalité, c'est une analyse quantitative pure de textes",,https://hlasse.github.io/TextDescriptives/
